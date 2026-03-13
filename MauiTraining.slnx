@@ -1,1 +1,5 @@
-<Solution />
+<Solution>
+  <Folder Name="/Section02/">
+    <Project Path="src/Section02/TextAdventure/TextAdventure.csproj" Id="60ea7519-d1d9-46e0-a09e-3a13e9b88315" />
+  </Folder>
+</Solution>
