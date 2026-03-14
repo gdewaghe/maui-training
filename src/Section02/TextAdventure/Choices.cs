@@ -12,6 +12,16 @@ internal static class Choices
             "You fall off a cliff and die.");
     }
 
+    public static void SecondChoice()
+    {
+        DisplayChoice(
+            "You are in front of the castle. You can enter either though the door or through the window.",
+            "Door",
+            "Window",
+            "You managed to enter the castle.",
+            "A guard arrests you.");
+    }
+
     private static void DisplayChoice(
         string choiceMessage,
         string firstChoice,
