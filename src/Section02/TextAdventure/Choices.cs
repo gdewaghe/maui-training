@@ -2,7 +2,7 @@
 
 internal static class Choices
 {
-    public static void FirstChoice()
+    public static void Start()
     {
         DisplayChoice(
             "You are in the forest. You can go either to the east or west.",
@@ -10,16 +10,15 @@ internal static class Choices
             "West",
             "You exit the forest and see the castle.",
             "You fall off a cliff and die.");
-    }
 
-    public static void SecondChoice()
-    {
         DisplayChoice(
             "You are in front of the castle. You can enter either though the door or through the window.",
             "Door",
             "Window",
             "You managed to enter the castle.",
             "A guard arrests you.");
+
+        Console.WriteLine("Congratulations! You have completed the adventure.");
     }
 
     private static void DisplayChoice(
