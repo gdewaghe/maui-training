@@ -18,6 +18,13 @@ internal static class Choices
             "You managed to enter the castle.",
             "A guard arrests you.");
 
+        DisplayChoice(
+            "You are in the corridor of the castle. There is a door on the left and right.",
+            "Left",
+            "Right",
+            "You found the princess and saved her!",
+            "You run into the guards.");
+
         Console.WriteLine("Congratulations! You have completed the adventure.");
     }
 
