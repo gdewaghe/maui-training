@@ -2,4 +2,7 @@
   <Folder Name="/Section02/">
     <Project Path="src/Section02/TextAdventure/TextAdventure.csproj" Id="60ea7519-d1d9-46e0-a09e-3a13e9b88315" />
   </Folder>
+  <Folder Name="/Section06/">
+    <Project Path="src/Section06/Trainings/Trainings.csproj" Id="ca8046b8-10b1-421b-b01a-2112b375b1ba" />
+  </Folder>
 </Solution>
