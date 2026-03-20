@@ -12,4 +12,14 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="20">
+        <Border
+            Margin="0,0,0,20"
+            Padding="10,2"
+            BackgroundColor="#ECECEC"
+            Stroke="Transparent">
+            <Entry BackgroundColor="Transparent" Placeholder="Research..." />
+        </Border>
+    </StackLayout>
 </ContentPage>
