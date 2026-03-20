@@ -7,7 +7,7 @@
     Title="Trainings">
 
     <ShellContent
-        Title="Home"
+        Title="Find your next subject"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
