@@ -22,6 +22,8 @@
             <Entry BackgroundColor="Transparent" Placeholder="Research..." />
         </Border>
 
+        <CollectionView x:Name="categoriesCollectionView" />
+
         <Grid
             RowDefinitions="Auto"
             ColumnDefinitions="Auto,2*"

@@ -6,7 +6,7 @@ using Microsoft.Maui.Platform;
 
 namespace Trainings.Platforms.Android;
 
-[Application]
+[Application(UsesCleartextTraffic = true)]
 public class MainApplication(IntPtr handle, JniHandleOwnership ownership) : MauiApplication(handle, ownership)
 {
     protected override MauiApp CreateMauiApp()
