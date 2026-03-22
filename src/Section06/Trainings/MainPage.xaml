@@ -22,39 +22,49 @@
             <Entry BackgroundColor="Transparent" Placeholder="Research..." />
         </Border>
 
-        <ListView x:Name="listView" />
+        <ListView
+            x:Name="listView"
+            BackgroundColor="White"
+            RowHeight="98"
+            SeparatorColor="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            RowDefinitions="Auto"
+                            ColumnDefinitions="Auto,2*"
+                            BackgroundColor="White">
+                            <Image
+                                Margin="0,0,20,0"
+                                Aspect="AspectFill"
+                                HeightRequest="80"
+                                Source="{Binding Image}" />
 
-        <Grid
-            RowDefinitions="Auto"
-            ColumnDefinitions="Auto,2*"
-            BackgroundColor="White">
-            <Image
-                Margin="0,0,20,0"
-                Aspect="AspectFill"
-                HeightRequest="80"
-                Source="icon_design.png" />
+                            <Label
+                                Grid.Column="1"
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="{Binding Title}" />
 
-            <Label
-                Grid.Column="1"
-                FontAttributes="Bold"
-                FontSize="18"
-                Text="Title example" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineHeight=".8"
+                                Text="{Binding Description}"
+                                VerticalOptions="Center" />
 
-            <Label
-                Grid.Column="1"
-                FontSize="16"
-                LineHeight=".8"
-                Text="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
-                VerticalOptions="Center" />
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Label
+                                    Padding="0,0,4,0"
+                                    Text="{Binding Count}"
+                                    VerticalOptions="End" />
 
-            <HorizontalStackLayout Grid.Column="1">
-                <Label
-                    Padding="0,0,4,0"
-                    Text="42"
-                    VerticalOptions="End" />
-
-                <Label Text="courses" VerticalOptions="End" />
-            </HorizontalStackLayout>
-        </Grid>
+                                <Label Text="courses" VerticalOptions="End" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
