@@ -38,6 +38,6 @@ public partial class MainPage : ContentPage
         HttpResponseMessage response = await client.GetAsync(restURL);
         var content = await response.Content.ReadAsStringAsync();
         var items = JsonConvert.DeserializeObject<List<Category>>(content);
-        categoriesCollectionView.ItemsSource = items;
+        listView.ItemsSource = items;
     }
 }

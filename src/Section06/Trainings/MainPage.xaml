@@ -22,7 +22,7 @@
             <Entry BackgroundColor="Transparent" Placeholder="Research..." />
         </Border>
 
-        <CollectionView x:Name="categoriesCollectionView" />
+        <ListView x:Name="listView" />
 
         <Grid
             RowDefinitions="Auto"
