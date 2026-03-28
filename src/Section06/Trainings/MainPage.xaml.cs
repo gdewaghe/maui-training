@@ -21,10 +21,9 @@ public partial class MainPage : ContentPage
         LoadDataFromLocalAssets();
     }
 
-    private void ToolbarItem_Clicked(object? sender, EventArgs e)
+    private async void ToolbarItem_Clicked(object? sender, EventArgs e)
     {
-        // TODO
-        Console.WriteLine("*** TODO: ToolbarItem_Clicked");
+        await Navigation.PushAsync(new UserPage());
     }
 
     public async void LoadDataFromAPI()
