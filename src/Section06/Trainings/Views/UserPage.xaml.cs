@@ -1,4 +1,4 @@
-namespace Trainings;
+namespace Trainings.Views;
 
 public partial class UserPage : ContentPage
 {

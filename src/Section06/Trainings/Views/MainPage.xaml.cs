@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Trainings.Models;
 
-namespace Trainings;
+namespace Trainings.Views;
 
 public partial class MainPage : ContentPage
 {
