@@ -13,8 +13,8 @@ public partial class UserPage : ContentPage
         await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 
-    private void Button_Clicked_1(object? sender, EventArgs e)
+    private async void Button_Clicked_1(object? sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new LoginPage());
     }
 }
