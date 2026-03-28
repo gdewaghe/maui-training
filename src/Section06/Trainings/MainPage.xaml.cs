@@ -17,7 +17,8 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
 
-        LoadDataFromAPI();
+        //LoadDataFromAPI();
+        LoadDataFromLocalAssets();
     }
 
     private void ToolbarItem_Clicked(object? sender, EventArgs e)
@@ -37,6 +38,15 @@ public partial class MainPage : ContentPage
 
         HttpResponseMessage response = await client.GetAsync(restURL);
         var content = await response.Content.ReadAsStringAsync();
+        var items = JsonConvert.DeserializeObject<List<Category>>(content);
+        listView.ItemsSource = items;
+    }
+
+    public async void LoadDataFromLocalAssets()
+    {
+        using Stream stream = await FileSystem.OpenAppPackageFileAsync("categories.json");
+        using var reader = new StreamReader(stream);
+        string content = reader.ReadToEnd();
         var items = JsonConvert.DeserializeObject<List<Category>>(content);
         listView.ItemsSource = items;
     }
