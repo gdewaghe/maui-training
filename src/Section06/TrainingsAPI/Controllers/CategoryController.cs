@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using TrainingsAPI.Models;
 
 namespace TrainingsAPI.Controllers;
 

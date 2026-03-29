@@ -1,4 +1,4 @@
-namespace TrainingsAPI;
+namespace TrainingsAPI.Models;
 
 public class Category(string title, int count, string description, string image)
 {
