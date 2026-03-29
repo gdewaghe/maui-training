@@ -6,7 +6,7 @@
     Shell.BackgroundColor="#F24D65"
     Shell.TitleColor="White">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="ToolbarItem_Clicked">
+        <ToolbarItem Clicked="OnUserToolbarItemClicked">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="MaterialIcons-Regular" Glyph="&#xe7fd;" />
             </ToolbarItem.IconImageSource>

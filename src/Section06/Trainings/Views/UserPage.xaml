@@ -59,14 +59,14 @@
         <Button
             Margin="0,40,0,0"
             BackgroundColor="#F24D65"
-            Clicked="Button_Clicked"
+            Clicked="OnBrowserButtonClicked"
             FontSize="16"
             Text="Lorem ipsum"
             WidthRequest="250" />
 
         <Button
             Background="Transparent"
-            Clicked="Button_Clicked_1"
+            Clicked="OnLoginButtonClicked"
             Text="Login"
             TextColor="#323A45" />
     </VerticalStackLayout>
