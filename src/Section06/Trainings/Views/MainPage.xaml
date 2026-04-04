@@ -23,7 +23,7 @@
         </Border>
 
         <ListView
-            x:Name="listView"
+            x:Name="CategoriesListView"
             BackgroundColor="White"
             RowHeight="98"
             SeparatorColor="White">

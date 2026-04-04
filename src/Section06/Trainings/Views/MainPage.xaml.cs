@@ -38,7 +38,7 @@ public partial class MainPage : ContentPage
         HttpResponseMessage response = await client.GetAsync(restURL);
         var content = await response.Content.ReadAsStringAsync();
         var items = JsonConvert.DeserializeObject<List<Category>>(content);
-        listView.ItemsSource = items;
+        CategoriesListView.ItemsSource = items;
     }
 
     public async void LoadDataFromLocalAssets()
@@ -47,6 +47,6 @@ public partial class MainPage : ContentPage
         using var reader = new StreamReader(stream);
         string content = reader.ReadToEnd();
         var items = JsonConvert.DeserializeObject<List<Category>>(content);
-        listView.ItemsSource = items;
+        CategoriesListView.ItemsSource = items;
     }
 }
