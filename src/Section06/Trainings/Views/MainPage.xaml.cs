@@ -49,4 +49,15 @@ public partial class MainPage : ContentPage
         var items = JsonConvert.DeserializeObject<List<Category>>(content);
         CategoriesListView.ItemsSource = items;
     }
+
+    private async void OnCategoryItemSelected(object? sender, SelectedItemChangedEventArgs e)
+    {
+        var category = (Category)e.SelectedItem;
+        //Console.WriteLine(category.Title);
+
+        await Navigation.PushAsync(new CategoryPage(category)
+        {
+            BindingContext = category
+        });
+    }
 }

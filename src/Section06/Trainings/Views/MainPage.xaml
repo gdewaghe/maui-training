@@ -26,7 +26,8 @@
             x:Name="CategoriesListView"
             BackgroundColor="White"
             RowHeight="98"
-            SeparatorColor="White">
+            SeparatorColor="White"
+            ItemSelected="OnCategoryItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
