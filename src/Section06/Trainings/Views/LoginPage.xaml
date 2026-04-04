@@ -25,12 +25,12 @@
             Margin="0,0,0,20"
             Padding="10,0"
             Stroke="#ECECEC">
-            <Entry x:Name="usernameEntry" Placeholder="Username" />
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
         </Border>
 
         <Border Padding="10,0" Stroke="#ECECEC">
             <Entry
-                x:Name="passwordEntry"
+                x:Name="PasswordEntry"
                 IsPassword="True"
                 Placeholder="Password" />
         </Border>
