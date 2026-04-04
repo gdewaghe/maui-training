@@ -43,7 +43,7 @@
         <Button
             Margin="0,40,0,0"
             BackgroundColor="#F24D65"
-            Clicked="OnLogInButtonClicked"
+            Clicked="OnLogInClicked"
             FontSize="16"
             Text="Log in"
             WidthRequest="250" />

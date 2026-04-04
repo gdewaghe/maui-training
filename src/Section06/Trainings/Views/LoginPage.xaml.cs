@@ -7,7 +7,7 @@ public partial class LoginPage : ContentPage
         InitializeComponent();
     }
 
-    private async void OnLogInButtonClicked(object? sender, EventArgs e)
+    private async void OnLogInClicked(object? sender, EventArgs e)
     {
         var username = UsernameEntry.Text;
         var password = PasswordEntry.Text;

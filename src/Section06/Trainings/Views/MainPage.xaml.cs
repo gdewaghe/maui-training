@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
         LoadDataFromLocalAssets();
     }
 
-    private async void OnUserToolbarItemClicked(object? sender, EventArgs e)
+    private async void OnUserClicked(object? sender, EventArgs e)
     {
         await Navigation.PushAsync(new UserPage());
     }
