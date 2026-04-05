@@ -9,8 +9,8 @@ public partial class LoginPage : ContentPage
 
     private async void OnLogInClicked(object? sender, EventArgs e)
     {
-        var username = UsernameEntry.Text;
-        var password = PasswordEntry.Text;
+        string username = UsernameEntry.Text;
+        string password = PasswordEntry.Text;
 
         // To be used on local
         //if (username == "guillaume" && password == "123")
@@ -19,14 +19,14 @@ public partial class LoginPage : ContentPage
         //}
 
         // http://10.0.2.2:5152/Login?username=guillaume&password=123
-        var restURL = $"http://10.0.2.2:5152/Login?username={username}&password={password}";
-        var client = new HttpClient
+        string restURL = $"http://10.0.2.2:5152/Login?username={username}&password={password}";
+        HttpClient client = new()
         {
             BaseAddress = new Uri(restURL)
         };
 
         HttpResponseMessage response = await client.GetAsync(restURL);
-        var content = await response.Content.ReadAsStringAsync();
+        string content = await response.Content.ReadAsStringAsync();
 
         if (content == username)
         {

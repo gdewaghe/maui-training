@@ -29,30 +29,30 @@ public partial class MainPage : ContentPage
     public async void LoadDataFromAPI()
     {
         // Replace 'localhost' with '10.0.2.2' to connect the phone to the computer
-        var restURL = "http://10.0.2.2:5152/Category";
-        var client = new HttpClient
+        string restURL = "http://10.0.2.2:5152/Category";
+        HttpClient client = new()
         {
             BaseAddress = new Uri(restURL)
         };
 
         HttpResponseMessage response = await client.GetAsync(restURL);
-        var content = await response.Content.ReadAsStringAsync();
-        var items = JsonConvert.DeserializeObject<List<Category>>(content);
+        string content = await response.Content.ReadAsStringAsync();
+        List<Category>? items = JsonConvert.DeserializeObject<List<Category>>(content);
         CategoriesListView.ItemsSource = items;
     }
 
     public async void LoadDataFromLocalAssets()
     {
         using Stream stream = await FileSystem.OpenAppPackageFileAsync("categories.json");
-        using var reader = new StreamReader(stream);
+        using StreamReader reader = new(stream);
         string content = reader.ReadToEnd();
-        var items = JsonConvert.DeserializeObject<List<Category>>(content);
+        List<Category>? items = JsonConvert.DeserializeObject<List<Category>>(content);
         CategoriesListView.ItemsSource = items;
     }
 
     private async void OnCategoryItemSelected(object? sender, SelectedItemChangedEventArgs e)
     {
-        var category = (Category)e.SelectedItem;
+        Category category = (Category)e.SelectedItem;
         //Console.WriteLine(category.Title);
 
         await Navigation.PushAsync(new CategoryPage(category)

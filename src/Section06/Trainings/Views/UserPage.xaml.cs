@@ -9,7 +9,7 @@ public partial class UserPage : ContentPage
 
     private async void OnBrowserButtonClicked(object? sender, EventArgs e)
     {
-        var uri = new Uri("https://www.stable-diffusion-france.fr/Guide_StableDiffusion_fr_v1.pdf");
+        Uri uri = new("https://www.stable-diffusion-france.fr/Guide_StableDiffusion_fr_v1.pdf");
         await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 

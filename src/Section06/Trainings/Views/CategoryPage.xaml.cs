@@ -21,9 +21,9 @@ public partial class CategoryPage : ContentPage
         try
         {
             using Stream stream = await FileSystem.OpenAppPackageFileAsync($"{categoryTitle}.json");
-            using var reader = new StreamReader(stream);
+            using StreamReader reader = new(stream);
             string content = reader.ReadToEnd();
-            var items = JsonConvert.DeserializeObject<List<Training>>(content);
+            List<Training>? items = JsonConvert.DeserializeObject<List<Training>>(content);
             //TrainingsListView.ItemsSource = items;
         }
         catch (Exception ex)
