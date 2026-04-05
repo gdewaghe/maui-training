@@ -11,7 +11,7 @@ public partial class CategoryPage : ContentPage
     {
         _category = category;
         InitializeComponent();
-        //NoCoursesError.IsVisible = true;
+        NoCoursesErrorLabel.IsVisible = false;
 
         LoadFromMauiAssets(category.Title.ToLower());
     }
@@ -24,12 +24,17 @@ public partial class CategoryPage : ContentPage
             using StreamReader reader = new(stream);
             string content = reader.ReadToEnd();
             List<Training>? items = JsonConvert.DeserializeObject<List<Training>>(content);
-            //TrainingsListView.ItemsSource = items;
+            TrainingsListView.ItemsSource = items;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            //TrainingsListView.ItemsSource = null;
-            //NoCoursesError.IsVisible = true;
+            TrainingsListView.ItemsSource = null;
+            NoCoursesErrorLabel.IsVisible = true;
         }
+    }
+
+    private void OnTrainingItemSelected(object? sender, SelectedItemChangedEventArgs e)
+    {
+
     }
 }
