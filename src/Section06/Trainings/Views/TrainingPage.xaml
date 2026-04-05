@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Trainings.Views.TrainingPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Follow the training"
+    Shell.BackgroundColor="#F24D65"
+    Shell.ForegroundColor="White"
+    Shell.TitleColor="White">
+    <VerticalStackLayout>
+        <Label
+            Margin="0,10,0,20"
+            FontAttributes="Bold"
+            FontSize="32"
+            HorizontalOptions="Center"
+            Text="{Binding Title}"
+            VerticalOptions="Center" />
+
+        <Label
+            Margin="0,0,0,20"
+            FontSize="22"
+            HorizontalOptions="Center"
+            Text="Watch the videos"
+            VerticalOptions="Center" />
+
+        <Image Source="videoplayer.png" WidthRequest="350" />
+
+        <ListView
+            x:Name="ChaptersListView"
+            Margin="20"
+            BackgroundColor="White">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        Detail="Lorem ipsum dolor sit amet (12min)"
+                        ImageSource="play.png"
+                        Text="Chapter X: Lorem ipsum"
+                        TextColor="#323A45" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Border
+            Margin="20"
+            Padding="20"
+            Stroke="#ECECEC">
+            <Grid ColumnDefinitions="*,2*">
+                <Image Margin="0,0,20,0" Source="icon_design.png" />
+
+                <StackLayout Grid.Column="1">
+                    <Label FontSize="18" Text="Resources" />
+
+                    <Label FontSize="12" Text="Download the course materials" />
+
+                    <Button
+                        Margin="0,10,0,0"
+                        Background="#F24D65"
+                        FontSize="16"
+                        Text="Download" />
+                </StackLayout>
+            </Grid>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
