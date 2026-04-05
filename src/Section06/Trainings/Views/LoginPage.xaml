@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Trainings.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login"
+    Shell.BackgroundColor="#F24D65"
+    Shell.ForegroundColor="White"
+    Shell.TitleColor="White">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*,2*" Margin="0,0,0,20">
+            <Image Source="education.png" />
+
+            <StackLayout Grid.Column="1">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="24"
+                    Text="Connection" />
+
+                <Label Text="Log in to access to your video trainings." />
+            </StackLayout>
+        </Grid>
+
+        <Border
+            Margin="0,0,0,20"
+            Padding="10,0"
+            Stroke="#ECECEC">
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+        </Border>
+
+        <Border Padding="10,0" Stroke="#ECECEC">
+            <Entry
+                x:Name="PasswordEntry"
+                IsPassword="True"
+                Placeholder="Password" />
+        </Border>
+
+        <HorizontalStackLayout Margin="0,10,0,0">
+            <CheckBox />
+            <Label Padding="0,11" Text="Remember me." />
+        </HorizontalStackLayout>
+
+        <Button
+            Margin="0,40,0,0"
+            BackgroundColor="#F24D65"
+            Clicked="OnLogInClicked"
+            FontSize="16"
+            Text="Log in"
+            WidthRequest="250" />
+
+        <Button
+            Background="Transparent"
+            Text="Forgotten password"
+            TextColor="#323A45" />
+    </VerticalStackLayout>
+</ContentPage>

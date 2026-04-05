@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Trainings.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.BackgroundColor="#F24D65"
+    Shell.TitleColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnUserClicked">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="MaterialIcons-Regular" Glyph="&#xe7fd;" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Margin="20">
+        <Border
+            Margin="0,0,0,20"
+            Padding="10,2"
+            BackgroundColor="#ECECEC"
+            Stroke="Transparent">
+            <Entry BackgroundColor="Transparent" Placeholder="Research..." />
+        </Border>
+
+        <ListView
+            x:Name="CategoriesListView"
+            BackgroundColor="White"
+            RowHeight="98"
+            SeparatorColor="White"
+            ItemSelected="OnCategoryItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            RowDefinitions="Auto"
+                            ColumnDefinitions="Auto,2*"
+                            BackgroundColor="White">
+                            <Image
+                                Margin="0,0,20,0"
+                                Aspect="AspectFill"
+                                HeightRequest="80"
+                                Source="{Binding Image}" />
+
+                            <Label
+                                Grid.Column="1"
+                                FontAttributes="Bold"
+                                FontSize="18"
+                                Text="{Binding Title}" />
+
+                            <Label
+                                Grid.Column="1"
+                                FontSize="16"
+                                LineHeight=".8"
+                                Text="{Binding Description}"
+                                VerticalOptions="Center" />
+
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Label
+                                    Padding="0,0,4,0"
+                                    Text="{Binding Count}"
+                                    VerticalOptions="End" />
+
+                                <Label Text="courses" VerticalOptions="End" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

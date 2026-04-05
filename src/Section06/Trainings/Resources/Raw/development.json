@@ -1,0 +1,44 @@
+[
+  {
+    "title": "C#",
+    "price": 100,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "cs.png",
+    "tag": "Code"
+  },
+  {
+    "title": "Unity",
+    "price": 200,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "unity.png",
+    "tag": "Unity"
+  },
+  {
+    "title": "Symfony",
+    "price": 150,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "sf.png",
+    "tag": "Web"
+  },
+  {
+    "title": "C++",
+    "price": 120,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "cpp.png",
+    "tag": "Code"
+  },
+  {
+    "title": "Figma",
+    "price": 100,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "figma.png",
+    "tag": "Design"
+  },
+  {
+    "title": "MAUI",
+    "price": 100,
+    "description": "Lorem ipsum dolor sit amet",
+    "image": "maui.png",
+    "tag": "Code"
+  }
+]
