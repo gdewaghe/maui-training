@@ -33,8 +33,13 @@ public partial class CategoryPage : ContentPage
         }
     }
 
-    private void OnTrainingItemSelected(object? sender, SelectedItemChangedEventArgs e)
+    private async void OnTrainingItemSelected(object? sender, SelectedItemChangedEventArgs e)
     {
+        Training training = (Training)e.SelectedItem;
 
+        await Navigation.PushAsync(new TrainingPage(training)
+        {
+            BindingContext = training
+        });
     }
 }
