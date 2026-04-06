@@ -8,7 +8,7 @@
     <TabBar>
         <ShellContent
             Title="Notes"
-            ContentTemplate="{DataTemplate views:MainPage}"
+            ContentTemplate="{DataTemplate views:NotesPage}"
             Icon="{OnPlatform 'icon_notes.png',
                               iOS='icon_notes_ios.png',
                               MacCatalyst='icon_notes_ios.png'}" />
