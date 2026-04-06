@@ -11,4 +11,7 @@
   <Folder Name="/Section07/">
     <Project Path="src/Section07/TakingNotes/TakingNotes.csproj" Id="356341c1-376b-4431-ab8c-79a960257b8f" />
   </Folder>
+  <Folder Name="/Section08/">
+    <Project Path="src/Section08/Mvvm/Mvvm.csproj" Id="a3daef16-dc37-4f83-a315-08570879a8d4" />
+  </Folder>
 </Solution>
