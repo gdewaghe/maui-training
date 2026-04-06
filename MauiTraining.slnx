@@ -8,4 +8,7 @@
     </Project>
     <Project Path="src/Section06/TrainingsAPI/TrainingsAPI.csproj" Id="d6ff71b8-09ba-44c6-aff8-e6c53ac2195d" />
   </Folder>
+  <Folder Name="/Section07/">
+    <Project Path="src/Section07/TakingNotes/TakingNotes.csproj" Id="356341c1-376b-4431-ab8c-79a960257b8f" />
+  </Folder>
 </Solution>
