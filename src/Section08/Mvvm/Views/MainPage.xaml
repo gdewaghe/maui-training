@@ -3,31 +3,38 @@
     x:Class="Mvvm.Views.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModels="clr-namespace:Mvvm.ViewModels"
     Title="Shopping list"
-    Shell.BackgroundColor="#512bd3">
+    x:DataType="viewModels:MainViewModel"
+    Shell.BackgroundColor="#512bd3"
+    Shell.TitleColor="White">
     <Grid
         RowDefinitions="Auto, *"
         ColumnDefinitions=".75*, .25*"
         Margin="10"
         RowSpacing="10">
-        <Entry />
+        <Entry Text="{Binding Text}" />
 
         <Button
             Grid.Column="1"
+            Command="{Binding AddItemCommand}"
             FontSize="18"
             Text="Add" />
 
-        <CollectionView Grid.Row="1" Grid.ColumnSpan="2">
-            <CollectionView.ItemsSource>
+        <CollectionView
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            ItemsSource="{Binding Ingredients}">
+            <!-- <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>Butter</x:String>
                     <x:String>Milk</x:String>
                     <x:String>Eggs</x:String>
                 </x:Array>
-            </CollectionView.ItemsSource>
+            </CollectionView.ItemsSource>-->
 
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}">
                     <Label
                         Margin="0,0,0,5"
                         FontSize="18"
