@@ -2,8 +2,52 @@
 <ContentPage
     x:Class="PcCleaner.Views.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
+    <VerticalStackLayout Padding="0">
+        <!-- Top menu with PC specs -->
+        <Frame
+            BackgroundColor="#444"
+            BorderColor="#444"
+            CornerRadius="0"
+            HeightRequest="100" />
 
-    <ScrollView />
+        <AbsoluteLayout>
+            <!-- Left side menu -->
+            <Frame
+                Padding="0"
+                AbsoluteLayout.LayoutBounds="0,0,0.075,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="#666"
+                BorderColor="#666"
+                CornerRadius="0"
+                MinimumWidthRequest="80" />
 
+            <!-- Main content area -->
+            <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
+                <Frame
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="White"
+                    BorderColor="#fff"
+                    CornerRadius="0"
+                    MinimumHeightRequest="585" />
+            </VerticalStackLayout>
+
+            <!-- Footer -->
+            <Frame
+                AbsoluteLayout.LayoutBounds="0,585,1,AutoSize"
+                AbsoluteLayout.LayoutFlags="WidthProportional"
+                BackgroundColor="#333"
+                BorderColor="#333"
+                CornerRadius="0"
+                HeightRequest="60">
+                <Label
+                    HorizontalTextAlignment="End"
+                    Text="PC Cleaner"
+                    TextDecorations="Underline"
+                    VerticalTextAlignment="Center" />
+            </Frame>
+        </AbsoluteLayout>
+    </VerticalStackLayout>
 </ContentPage>
