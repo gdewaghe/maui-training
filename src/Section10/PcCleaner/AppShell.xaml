@@ -4,10 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:PcCleaner.Views"
-    Title="PcCleaner">
+    Title="PC Cleaner"
+    Shell.NavBarIsVisible="False">
 
     <ShellContent
-        Title="Home"
+        Title="PC Cleaner"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
 
