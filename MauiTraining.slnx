@@ -14,4 +14,7 @@
   <Folder Name="/Section08/">
     <Project Path="src/Section08/Mvvm/Mvvm.csproj" Id="a3daef16-dc37-4f83-a315-08570879a8d4" />
   </Folder>
+  <Folder Name="/Section10/">
+    <Project Path="src/Section10/PcCleaner/PcCleaner.csproj" Id="65b87a3d-babb-46d6-a73e-00a448af0603" />
+  </Folder>
 </Solution>
