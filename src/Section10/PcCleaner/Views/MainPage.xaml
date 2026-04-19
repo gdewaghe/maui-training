@@ -10,7 +10,41 @@
             BackgroundColor="#444"
             BorderColor="#444"
             CornerRadius="0"
-            HeightRequest="100" />
+            HeightRequest="100">
+            <FlexLayout Padding="0" Direction="Row">
+                <!-- Logo -->
+                <Image
+                    Margin="0,0,5,0"
+                    Source="pcclogo.png"
+                    WidthRequest="60" />
+
+                <!-- Name + version -->
+                <VerticalStackLayout Margin="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Title"
+                        Text="PC Cleaner" />
+
+                    <Label Text="v1.4.0" />
+                </VerticalStackLayout>
+
+                <!-- Add spaces -->
+                <Label WidthRequest="80" />
+
+                <!-- Specs -->
+                <VerticalStackLayout FlexLayout.Grow="1">
+                    <Label x:Name="OsVersionLabel" Text="Microsoft Windows X" />
+                    <Label x:Name="HardwareLabel" Text="xxxxx" />
+                </VerticalStackLayout>
+
+                <!-- Info -->
+                <ImageButton
+                    BackgroundColor="#444"
+                    Clicked="OnInfoClicked"
+                    Source="info.png"
+                    WidthRequest="50" />
+            </FlexLayout>
+        </Frame>
 
         <AbsoluteLayout>
             <!-- Left side menu -->
