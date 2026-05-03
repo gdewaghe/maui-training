@@ -1,10 +1,20 @@
-﻿namespace PcCleaner.Views;
+﻿using PcCleaner.Helpers;
+
+namespace PcCleaner.Views;
 
 public partial class MainPage : ContentPage
 {
     public MainPage()
     {
         InitializeComponent();
+
+        ShowSystemInfo();
+    }
+
+    public void ShowSystemInfo()
+    {
+        OsVersionLabel.Text = SystemInfo.GetWindowsVersion();
+        HardwareLabel.Text = SystemInfo.GetHardwareInfo();
     }
 
     private async void OnInfoClicked(object? sender, EventArgs e)
