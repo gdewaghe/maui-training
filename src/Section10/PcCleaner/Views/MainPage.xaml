@@ -34,6 +34,7 @@
                 <!-- Specs -->
                 <VerticalStackLayout FlexLayout.Grow="1">
                     <Label x:Name="OsVersionLabel" Text="Microsoft Windows X" />
+
                     <Label x:Name="HardwareLabel" Text="xxxxx" />
                 </VerticalStackLayout>
 
@@ -131,7 +132,76 @@
                     BackgroundColor="White"
                     BorderColor="#fff"
                     CornerRadius="0"
-                    MinimumHeightRequest="585" />
+                    MinimumHeightRequest="585">
+                    <Grid
+                        ColumnDefinitions="Auto,*"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <!-- Clean options -->
+                        <ScrollView
+                            Background="#ededed"
+                            HeightRequest="585"
+                            WidthRequest="220">
+                            <StackLayout>
+                                <Label
+                                    Margin="1,10,0,10"
+                                    FontAttributes="Bold"
+                                    Text="Files to clean:"
+                                    TextColor="Black" />
+
+                                <!-- Temporary files -->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="TemporaryFilesCheckBox" IsChecked="True" />
+
+                                    <Label
+                                        Text="Temporary files"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <!-- Empty the bin -->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="EmptyBinCheckBox" IsChecked="True" />
+
+                                    <Label
+                                        Text="Empty the bin"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <!-- Logs -->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="LogsCheckBox" IsChecked="True" />
+
+                                    <Label
+                                        Text="Windows logs"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <!-- Windows Update -->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="WindowsUpdateCheckBox" IsChecked="True" />
+
+                                    <Label
+                                        Text="Windows Update files"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+
+                                <!-- Error report -->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="ErrorsCheckBox" IsChecked="True" />
+
+                                    <Label
+                                        Text="Error report"
+                                        TextColor="Black"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </Grid>
+                </Frame>
             </VerticalStackLayout>
 
             <!-- Footer -->
