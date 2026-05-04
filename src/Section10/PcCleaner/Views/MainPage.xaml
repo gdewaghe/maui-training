@@ -55,7 +55,73 @@
                 BackgroundColor="#666"
                 BorderColor="#666"
                 CornerRadius="0"
-                MinimumWidthRequest="80" />
+                MinimumWidthRequest="80">
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <BoxView BackgroundColor="Transparent" HeightRequest="1" />
+
+                    <!-- Clean page -->
+                    <ImageButton
+                        BackgroundColor="#666"
+                        Source="clean.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        Margin="0,-15,0,10"
+                        FontAttributes="Bold"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="Clean"
+                        TextDecorations="Underline" />
+
+                    <!-- RAM page -->
+                    <ImageButton
+                        BackgroundColor="#666"
+                        Source="ram.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        Margin="0,-15,0,10"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="RAM" />
+
+                    <!-- Tools page -->
+                    <ImageButton
+                        BackgroundColor="#666"
+                        Source="tools.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        Margin="0,-15,0,10"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="Tools" />
+
+                    <!-- Options page -->
+                    <ImageButton
+                        BackgroundColor="#666"
+                        Source="options.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        Margin="0,-15,0,10"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="Options" />
+
+                    <!-- Update page -->
+                    <ImageButton
+                        BackgroundColor="#666"
+                        Source="update.png"
+                        WidthRequest="50" />
+
+                    <Label
+                        Margin="0,-15,0,10"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        Text="Update" />
+                </VerticalStackLayout>
+            </Frame>
 
             <!-- Main content area -->
             <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
