@@ -151,10 +151,7 @@
 
                                 <!-- Temporary files -->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox
-                                        x:Name="TemporaryFilesCheckBox"
-                                        CheckedChanged="OnTemporaryFilesCheckedChanged"
-                                        IsChecked="True" />
+                                    <CheckBox x:Name="TemporaryFilesCheckBox" CheckedChanged="OnTemporaryFilesCheckedChanged" />
 
                                     <Label
                                         Text="Temporary files"
@@ -164,10 +161,7 @@
 
                                 <!-- Empty the bin -->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox
-                                        x:Name="EmptyBinCheckBox"
-                                        CheckedChanged="OnEmptyBinCheckedChanged"
-                                        IsChecked="True" />
+                                    <CheckBox x:Name="EmptyBinCheckBox" CheckedChanged="OnEmptyBinCheckedChanged" />
 
                                     <Label
                                         Text="Empty the bin"
@@ -177,10 +171,7 @@
 
                                 <!-- Logs -->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox
-                                        x:Name="LogsCheckBox"
-                                        CheckedChanged="OnLogsCheckedChanged"
-                                        IsChecked="True" />
+                                    <CheckBox x:Name="LogsCheckBox" CheckedChanged="OnLogsCheckedChanged" />
 
                                     <Label
                                         Text="Windows logs"
@@ -190,10 +181,7 @@
 
                                 <!-- Windows Update -->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox
-                                        x:Name="WindowsUpdateCheckBox"
-                                        CheckedChanged="OnWindowsUpdateCheckedChanged"
-                                        IsChecked="True" />
+                                    <CheckBox x:Name="WindowsUpdateCheckBox" CheckedChanged="OnWindowsUpdateCheckedChanged" />
 
                                     <Label
                                         Text="Windows Update files"
@@ -203,10 +191,7 @@
 
                                 <!-- Error report -->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox
-                                        x:Name="ErrorsCheckBox"
-                                        CheckedChanged="OnErrorsCheckedChanged"
-                                        IsChecked="True" />
+                                    <CheckBox x:Name="ErrorsCheckBox" CheckedChanged="OnErrorsCheckedChanged" />
 
                                     <Label
                                         Text="Error report"
