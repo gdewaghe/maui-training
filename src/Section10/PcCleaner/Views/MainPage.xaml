@@ -239,7 +239,7 @@
 
                                     <!-- Summary table -->
                                     <TableView
-                                        x:Name="summaryTable"
+                                        x:Name="SummaryTable"
                                         Intent="Settings"
                                         IsVisible="False"
                                         RowHeight="45">
