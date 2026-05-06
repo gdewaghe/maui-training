@@ -237,11 +237,6 @@
                                         FontAttributes="Bold"
                                         TextColor="Black" />
 
-                                    <Label
-                                        x:Name="DebugLabel"
-                                        Text="Debug"
-                                        TextColor="Black" />
-
                                     <!-- Summary table -->
                                     <TableView
                                         x:Name="SummaryTable"

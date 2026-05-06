@@ -58,12 +58,7 @@ public partial class MainPage : ContentPage
 
     private void OnCleanClicked(object? sender, EventArgs e)
     {
-        DebugLabel.Text = $"Info: " +
-            $"{_temporaryFilesChecked} - " +
-            $"{_binChecked} - " +
-            $"{_logsChecked} - " +
-            $"{_windowsUpdateChecked} - " +
-            $"{_errorsChecked}";
+        
     }
 
     private void OnTemporaryFilesCheckedChanged(object? sender, CheckedChangedEventArgs e)
