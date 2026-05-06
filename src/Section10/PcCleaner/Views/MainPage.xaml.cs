@@ -1,4 +1,5 @@
 ﻿using PcCleaner.Helpers;
+using System.Runtime.InteropServices;
 
 namespace PcCleaner.Views;
 
@@ -58,8 +59,35 @@ public partial class MainPage : ContentPage
 
     private void OnCleanClicked(object? sender, EventArgs e)
     {
-        
+        InfoLabel.IsVisible = false;
+
+        if (_binChecked)
+        {
+            EmptyRecycleBin();
+        }
+
+        CleaningProgressBar.Progress = 1;
+        SummaryTable.IsVisible = true;
     }
+
+    public void EmptyRecycleBin()
+    {
+        // Flag to cancel confirmation
+        const int SHERB_NO_CONFIRMATION = 0x00000001;
+
+        try
+        {
+            SHEmptyRecycleBin(IntPtr.Zero, null, SHERB_NO_CONFIRMATION);
+            BinDetail.Text = "Recycle Bin is empty.";
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    [DllImport("shell32.dll")]
+    private static extern int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
 
     private void OnTemporaryFilesCheckedChanged(object? sender, CheckedChangedEventArgs e)
     {
