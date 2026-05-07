@@ -71,6 +71,21 @@ public partial class MainPage : ContentPage
             EmptyRecycleBin();
         }
 
+        if (_windowsUpdateChecked)
+        {
+            ClearWindowsUpdate();
+        }
+
+        if (_errorsChecked)
+        {
+            ClearWindowsWER();
+        }
+
+        if (_logsChecked)
+        {
+            ClearWindowsLogs();
+        }
+
         CleaningProgressBar.Progress = 1;
         SummaryTable.IsVisible = true;
     }
@@ -102,6 +117,39 @@ public partial class MainPage : ContentPage
         {
             TemporaryFilesDetail.Detail = $"{GetFilesCountInFolder(TEMP_PATH)} files removed.";
             ProcessDirectory(TEMP_PATH);
+        }
+    }
+
+    public void ClearWindowsUpdate()
+    {
+        const string WINDOWS_UPDATE_PATH = @"C:\Windows\SoftwareDistribution\Download";
+
+        if (Directory.Exists(WINDOWS_UPDATE_PATH))
+        {
+            WindowsUpdateDetail.Detail = $"{GetFilesCountInFolder(WINDOWS_UPDATE_PATH)} files removed.";
+            ProcessDirectory(WINDOWS_UPDATE_PATH);
+        }
+    }
+
+    public void ClearWindowsWER()
+    {
+        const string WER_PATH = @"C:\ProgramData\Microsoft\Windows\WER";
+
+        if (Directory.Exists(WER_PATH))
+        {
+            ErrorsDetail.Detail = $"{GetFilesCountInFolder(WER_PATH)} files removed.";
+            ProcessDirectory(WER_PATH);
+        }
+    }
+
+    public void ClearWindowsLogs()
+    {
+        const string WINDOWS_LOGS_PATH = @"C:\Windows\SoftwareDistribution\Download";
+
+        if (Directory.Exists(WINDOWS_LOGS_PATH))
+        {
+            LogsDetail.Detail = $"{GetFilesCountInFolder(WINDOWS_LOGS_PATH)} files removed.";
+            ProcessDirectory(WINDOWS_LOGS_PATH);
         }
     }
 
