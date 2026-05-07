@@ -61,6 +61,11 @@ public partial class MainPage : ContentPage
     {
         InfoLabel.IsVisible = false;
 
+        if (_temporaryFilesChecked)
+        {
+            ClearWindowsTemporaryFolder();
+        }
+
         if (_binChecked)
         {
             EmptyRecycleBin();
@@ -88,6 +93,65 @@ public partial class MainPage : ContentPage
 
     [DllImport("shell32.dll")]
     private static extern int SHEmptyRecycleBin(IntPtr hwnd, string? pszRootPath, uint dwFlags);
+
+    public void ClearWindowsTemporaryFolder()
+    {
+        const string TEMP_PATH = @"C:\Windows\Temp";
+
+        if (Directory.Exists(TEMP_PATH))
+        {
+            TemporaryFilesDetail.Detail = $"{GetFilesCountInFolder(TEMP_PATH)} files removed.";
+            ProcessDirectory(TEMP_PATH);
+        }
+    }
+
+    public int GetFilesCountInFolder(string path)
+    {
+        int count = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Length;
+        return count;
+    }
+
+    public void ProcessDirectory(string targetDirectory)
+    {
+        string[] fileEntries = Directory.GetFiles(targetDirectory);
+        foreach (string fileName in fileEntries)
+        {
+            ProcessFile(fileName);
+        }
+
+        string[] subdirectoryEntries = Directory.GetDirectories(targetDirectory);
+        foreach (string subdirectory in subdirectoryEntries)
+        {
+            ProcessDirectory(subdirectory);
+        }
+    }
+
+    public void ProcessFile(string path)
+    {
+        try
+        {
+            if (path.Contains("\\Temp"))
+            {
+                File.Delete(path);
+            }
+            else if (path.Contains("\\SoftwareDistribution"))
+            {
+                File.Delete(path);
+            }
+            else if (path.Contains("\\winevt\\Logs"))
+            {
+                File.Delete(path);
+            }
+            else if (path.Contains("\\Windows\\WER"))
+            {
+                File.Delete(path);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("The process failed: {0}", ex.Message);
+        }
+    }
 
     private void OnTemporaryFilesCheckedChanged(object? sender, CheckedChangedEventArgs e)
     {
